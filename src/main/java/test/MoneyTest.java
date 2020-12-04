@@ -27,7 +27,6 @@ public class MoneyTest {
 	@Test
 	public void AdditionTest() {
 		Money moneyToAddEur = new Money(20, "EUR");
-		
 		assertEquals(money.add(moneyToAddEur).Amount(), 30);
 	}
 }
