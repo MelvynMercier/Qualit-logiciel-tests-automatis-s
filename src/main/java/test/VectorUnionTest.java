@@ -52,7 +52,6 @@ class UnionSetTest {
     void elementTest() {
         for (int i = 0 ; i < vectorUnion.size() ; i++) {
             Integer nb = (Integer)vectorUnion.elementAt(i);
-//            int iValue = i + 1;
             assertTrue(nb.intValue() == i+1);
         }
     }
