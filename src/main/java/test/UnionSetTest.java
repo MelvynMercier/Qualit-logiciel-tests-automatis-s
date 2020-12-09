@@ -11,16 +11,30 @@ import java.util.Vector;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class UnionSetTest {
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UnionSetTest.
+ */
+///Class test
+public class UnionSetTest {
 
+	/** The vector 1. */
 	//Définition type variables
 	private Vector vector1;
+	
+	/** The vector 2. */
 	private Vector vector2;
+	
+	/** The vector union. */
 	private Vector vectorUnion;
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@BeforeAll
-	void SetUp() {
+	void SetUp() throws Exception {
 		//Initialisation données variable
 		vector1 = new Vector<>();
 		vector2 = new Vector<>();
@@ -44,6 +58,9 @@ class UnionSetTest {
 
 	}
 
+	/**
+	 * Down.
+	 */
 	@AfterAll
 	public void Down() {
 		//Met toute les variable à null
@@ -52,6 +69,9 @@ class UnionSetTest {
 		vectorUnion = null;
 	}
 
+	/**
+	 * Element test.
+	 */
 	@Test
 	void ElementTest() {
 		//Vérification SI l'élément à i dans "vectorUnion" égale i+1 
@@ -61,6 +81,9 @@ class UnionSetTest {
 		}
 	}
 
+	/**
+	 * Removes the and order check.
+	 */
 	@Test
 	void RemoveAndOrderCheck() {
 		//Supprime un element dans le vecteur et vérifie son ordre final

@@ -11,9 +11,18 @@ import org.junit.jupiter.api.Test;
 import src.Money;
 import src.MoneyBag;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MoneyBagTest.
+ */
 public class MoneyBagTest {
+	
+	/** The test bag. */
 	MoneyBag testBag;
 
+	/**
+	 * Creates the money bag.
+	 */
 	@BeforeEach
 	void CreateMoneyBag() {
 		Money money1, money2, money3, money4;
@@ -35,6 +44,11 @@ public class MoneyBagTest {
 		}
 	}
 	
+    /**
+     * Creates the special money bag.
+     *
+     * @return the money bag
+     */
     MoneyBag CreateSpecialMoneyBag() {
         Money money1, money2, money3, money4;
         MoneyBag moneyBag = new MoneyBag();
@@ -56,12 +70,18 @@ public class MoneyBagTest {
         return moneyBag;
     }
     
+    /**
+     * Creates the money bag size.
+     */
     @Test
     void CreateMoneyBagSize() {
         MoneyBag moneybag = new MoneyBag();
         assertEquals(0, moneybag.moneysDictionnary.size());
     }
     
+    /**
+     * Adds the money.
+     */
     @Test
     void AddMoney() {
         Money money;
@@ -75,6 +95,9 @@ public class MoneyBagTest {
         assertEquals(20, this.testBag.moneysDictionnary.get("EUR").Amount());
     }
     
+    /**
+     * Adds the money bag.
+     */
     @Test
     void AddMoneyBag() {
         MoneyBag moneyBagToAdd = CreateSpecialMoneyBag();
@@ -89,6 +112,9 @@ public class MoneyBagTest {
         assertEquals(4, this.testBag.moneysDictionnary.size());
     }
     
+    /**
+     * Adds the money no existing.
+     */
     @Test
     void AddMoneyNoExisting() {
         MoneyBag moneyBag = new MoneyBag();
@@ -101,6 +127,9 @@ public class MoneyBagTest {
         assertEquals(1, moneyBag.moneysDictionnary.size());
     }
     
+    /**
+     * Adds the money bag no existing.
+     */
     @Test
     void AddMoneyBagNoExisting() {
         MoneyBag moneyBag = new MoneyBag();
@@ -115,6 +144,9 @@ public class MoneyBagTest {
         assertEquals(4, moneyBag.moneysDictionnary.size());
     }
     
+    /**
+     * Subb exist money.
+     */
     @Test
     void SubbExistMoney() {
         Money money;
@@ -135,6 +167,9 @@ public class MoneyBagTest {
         assertEquals(4, this.testBag.moneysDictionnary.size());
     }
     
+    /**
+     * Normalize test.
+     */
     @Test
     void NormalizeTest() {
         Double normalizeValue = this.testBag.Normalize();
